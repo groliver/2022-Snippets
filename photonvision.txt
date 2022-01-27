@@ -1,0 +1,15 @@
+HOW TO SET UP PHOTONVISION
+
+DOWNLOAD PHOTONVISION FROM https://github.com/PhotonVision/photonvision/releases/
+
+MOVE IT TO THE DESIRED LOCATION
+
+IF ON WINDOWS 
+  FROM A NEW POWER-SHELL SESSION, CD INTO THE LOCATION OF THE DOWNLOAD
+  TYPE  java -jar photonvision-xxx.jar --disable-networking
+  GO TO localhost:5800
+  DONE
+  
+IF YOU'RE ON ANYTHING ELSE
+  try the same above but in a bash session, idk if it works on mac
+    
