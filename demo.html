@@ -1,0 +1,130 @@
+<head>
+    <title>Scouting Webpage Draft</title>
+    <title>My Page Title</title>
+    <link href="hawk.png" rel="icon" type="image/png">
+    <style type="text/css">
+         body {
+            width: 100%;
+            font-family: Arial, Verdana, sans-serif;
+            color: #665544;}
+            #footer {
+            background-color: #efefef;
+            padding: 0.5em 0;
+            margin: 1%;}
+         .column1of3, .column2of3, .column3of3 {
+            width: 30%;
+            float: left;
+            margin: 1%;}
+            .column3of3 {
+            width: 30%;
+            float: left;
+            margin-right: 0%;}
+      </style>
+    <script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script></head>
+<body>
+    <div id="header">
+        <h1><img src="hawk.png" alt="Fusioncorp Logo">
+            Cistercian Scouting :)</h1>
+    </div>
+    <div>
+        <div id="content">
+            <div class="column1of3">
+                <p><h1>Before Match</h1></p>
+                <form>
+                    <label for="TeamNum">Robot team number:</label>
+                    <input type="text" id="TeamNum" name="TeamNum"><br>
+                    <p></p>
+                    <label for="MatchNum">Match number:</label>
+                    <input type="text" id="MatchNum" name="MatchNum"><br>
+                    <p></p>
+                    <label for="Ally1Num">Ally 1 team number:</label>
+                    <input type="text" id="Ally1Num" name="Ally1Num"><br>
+                    <label for="Ally2Num">Ally 2 team number:</label>
+                    <input type="text" id="Ally2Num" name="Ally2Num"><br>
+                    <p></p>
+                    <label for="Enemy1Num">Enemy 1 team number:</label>
+                    <input type="text" id="Enemy1Num" name="Enemy1Num"><br>
+                    <label for="Enemy2Num">Enemy 2 team number:</label>
+                    <input type="text" id="Enemy2Num" name="Enemy2Num"><br>
+                    <label for="Enemy3Num">Enemy 3 team number:</label>
+                    <input type="text" id="Enemy3Num" name="Enemy3Num"><br>
+                </form>
+            </div>
+            <div class= "column2of3">
+                <p><h1>During Match</h1></p>
+
+                <form>
+                    <label for="Miss">Shot missed</label>
+                    <button onclick="buttonClick()" id="Miss" value="0" name="Miss"></button><br>
+                        <input type="text" id="inc" value="0"></input>
+                        <label for="LHmade">Lower Hub shot made</label>
+                    <input type="button" id="LHmade" name="LHmade"><br>
+                    <label for="UHmade">Upper hub shot made</label>
+                    <input type="button" id="UHmade" name="UHmade"><br><br>
+                    <p><h2>Climb:</h2></p>
+                    <input type="radio" id="NoClimb" name="Climb" value="NoClimb">
+                    <label for="NoClimb">No climb/Failed climb</label><br>
+                    <input type="radio" id="Rung1" name="Climb" value="Rung1">
+                    <label for="Rung1">Rung 1 climb</label><br>
+                    <input type="radio" id="Rung2" name="Climb" value="Rung2">
+                    <label for="Rung2">Rung 2 climb</label><br>
+                    <input type="radio" id="Rung3" name="Climb" value="Rung3">
+                    <label for="Rung3">Rung 3 climb</label><br>
+                    <input type="radio" id="Rung4" name="Climb" value="Rung4">
+                    <label for="Rung4">Rung 4 climb</label><br><br>
+                    <p><h2>Auton:</h2></p>
+                    <input type="radio" id="NoAuton" name="Auton" value="NoAuton">
+                    <label for="NoClimb">No ball auton</label><br>
+                    <input type="radio" id="1BallA" name="Auton" value="1BallA">
+                    <label for="Rung1">1 ball auton</label><br>
+                    <input type="radio" id="2BallA" name="Auton" value="2BallA">
+                    <label for="Rung2">2 ball auton</label><br>
+                    <input type="radio" id="3BallA" name="Auton" value="3BallA">
+                    <label for="Rung3">3 ball auton</label><br>
+                    <input type="radio" id="4BallA" name="Auton" value="4BallA">
+                    <label for="Rung4">4 ball auton</label><br>
+                    <input type="radio" id="5BallA" name="Auton" value="5BallA">
+                    <label for="Rung4">5 ball auton</label><br>
+                </form>
+            </div>
+            <div class= "column3of3">
+                <p><h1>After Match</h1></p>
+                <form>
+                    <label for="TeamPoints">Total points for ally team:</label>
+                    <input type="text" id="TeamPoints" name="TeamPoints"><br>
+                    <label for="EnemyPoints">Total points for enemy team:</label>
+                    <input type="text" id="EnemyPoints" name="EnemyPoints"><br>
+                    <label for="Penalties">Penalties:</label>
+                    <input type="text" id="Penalties" name="Penalties"><br>
+                    <p><h2>Playstyle:</h2></p>
+                    <input type="radio" id="Offensive" name="Offensive" value="Offensive">
+                    <label for="Offensive">Offensive playstyle</label><br>
+                    <input type="radio" id="Defensive" name="Defensive" value="Defensive">
+                    <label for="Defensive">Defensive playstyle</label><br>
+                    <p><h2>Match Outcome:</h2></p>
+                    <input type="radio" id="Win" name="Win" value="Win">
+                    <label for="Offensive">Victory</label><br>
+                    <input type="radio" id="Loss" name="Loss" value="Loss">
+                    <label for="Defensive">Defeat</label><br>
+                    <p><h2>Intake:</h2></p>
+                    <input type="radio" id="Human" name="Human" value="Human">
+                    <label for="Human">Human Intake</label><br>
+                    <input type="radio" id="Ground" name="Ground" value="Ground">
+                    <label for="Ground">Ground Intake</label><br>
+                    <p><h2>Shooter versatility:</h2></p>
+                    <input type="radio" id="NoShoot" name="NoShoot" value="NoShoot">
+                    <label for="NoShoot">Unable to shoot</label><br>
+                    <input type="radio" id="LowerH" name="LowerH" value="LowerH">
+                    <label for="LowerH">Only able to shoot lower hub</label><br>
+                    <input type="radio" id="UpperH" name="UpperH" value="UpperH">
+                    <label for="UpperH">Only able to shoot upper hub</label><br>
+                    <input type="radio" id="BothH" name="BothH" value="BothH">
+                    <label for="BothH">Able to shoot both hubs</label><br>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <p> Copyright © Archer Oliver</p>
+    </div>
+</body>
